@@ -12,18 +12,23 @@ const setBar = () => {
 	switch (slider.value) {
 		case "10":
 			amount = 8;
+			views.innerHTML = "10K PAGEVIEWS"
 			break;
 		case "20":
 			amount = 12;
+			views.innerHTML = "50K PAGEVIEWS"
 			break;
 		case "30":
 			amount = 16;
+			views.innerHTML = "100K PAGEVIEWS"
 			break;
 		case "40":
 			amount = 24;
+			views.innerHTML = "500K PAGEVIEWS"
 			break;
 		case "50":
 			amount = 32;
+			views.innerHTML = "1M PAGEVIEWS"
 			break;
 
 		default:
