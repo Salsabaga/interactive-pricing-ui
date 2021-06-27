@@ -1,105 +1,191 @@
-# Frontend Mentor - Interactive pricing component
+# Frontend Mentor - Interactive pricing component solution
 
-![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this interactive pricing component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Use the slider and toggle to see prices for different page view numbers (details provided below)
+- Use the slider and toggle to see prices for different page view numbers
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-### Page view and pricing totals
+[Full Image of the final product for the Interactive Pricing Component](./images/Screenshot.png)
 
-Here are the different page view ranges and the corresponding monthly price totals:
+### Links
 
-- 10K pageviews / $8 per month
-- 50K pageviews / $12 per month
-- 100K pageviews / $16 per month
-- 500k pageviews / $24 per month
-- 1M pageviews / $36 per month
+- Solution URL: [Salsabaga/interactive-component-UI](https://salsabaga.github.io/interactive-pricing-ui/)
 
-If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
+## My process
 
-## Where to find everything
+### Built with
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Semantic HTML5 markup
+- CSS3 custom properties
+- Flexbox
+- Vanilla Javascript
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### What I learned
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+What I had learnt from coding this challenge is that I am fully grateful of Front End Developers and the amount of grit they have to get through just to exactly follow a design template cause wow.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+For the code I have written, starting with HTML I have maintained the consistency of the use of containers and wrapping divs used for splitting each component. In addition, the use of splitting the containers to be convenient for the use of CSS Flexbox.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+CSS is a massive, often bloated, language with so much styles for every element. Yet, its massive quantity allows me to discover more varieties of manipulating the DOM, like discovering an island in a barren sea. I have learnt to manipulate list styles from a left margin display to centering the list and putting the points away from each other at an even space.
 
-## Building your project
+```css
+#check-list > ul > li {
+	text-align: center;
+	list-style-position: inside;
+}
+```
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+One great element of CSS is how much it pushes one to find and solve problems of styling the DOM, this is especially towards images and use of the background property. One issue I had was applying the circular img to the title container and only showing a portion of the image. How I solved this was by applying a padding on the top and bottom of the text which increased the space of the element to show the full image, rather than using the height and width property.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```css
+#title-container {
+	text-align: center;
+	padding: 100px 0;
+	background-image: url("./images/pattern-circles.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+```
 
-## Deploying your project
+Thirdly, I have learnt to create design custom sliders and checkboxes to a specific style, which can be a very complex task since the process involves removing the default style of the element to create the custom design. I have learnt the difficulty and inconvenience of -moz and -webkit properties which must be implemented to enable all browsers to display the styles. Small rant I must say it is ridiculuous how current so many features used for modern browsers must also be adapted for legacy and rarely used browsers.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```css
+/* Range Slider */
+.slider-container {
+	position: relative;
+	flex-basis: 100%;
+	margin: 10px 50px;
+}
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+.slider-container .bar {
+	position: absolute;
+	z-index: 1;
+	top: 4px;
+	width: 100%;
+	height: 10px;
+	background-color: hsl(224, 65%, 95%);
+	overflow: hidden;
+	border-radius: 10px;
+}
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+.slider-container .bar .fill {
+	display: block;
+	width: 0;
+	height: 100%;
+	background-color: var(--full-slider-background);
+}
 
-## Create a custom `README.md`
+.slider-container .range {
+	-webkit-appearance: none;
+	width: 100%;
+	position: relative;
+	height: 12px;
+	z-index: 2;
+	background-color: transparent;
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+.slider-container .range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 60px;
+	height: 60px;
+	background-color: var(--slider-background);
+	background-image: url("./images/icon-slider.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 2.5em;
+	cursor: pointer;
+	border-radius: 50%;
+}
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+The issues I hit with Javascript was the implementation of both the slider functionality and the inclusion of the discount button when it is turned on or off. The main issue was that I had to ensure the amount for each pageview were not dynamicly changed when the button was pressed and use of the slider simultaneously. In order to solve this I split the functionality of both the slider and checkbox to display the amount, which had solved the prices issue and the inclusion of the button to display the amount and the pageviews that would be POSTED to the database.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```js
+const setBar = () => {
+	fill.style.width = slider.value * 2 - 10 + "%";
+	switch (slider.value) {
+		case "10":
+			amount = 8;
+			views.innerHTML = "10K PAGEVIEWS";
+			break;
+		case "20":
+			amount = 12;
+			views.innerHTML = "50K PAGEVIEWS";
+			break;
+		case "30":
+			amount = 16;
+			views.innerHTML = "100K PAGEVIEWS";
+			break;
+		case "40":
+			amount = 24;
+			views.innerHTML = "500K PAGEVIEWS";
+			break;
+		case "50":
+			amount = 32;
+			views.innerHTML = "1M PAGEVIEWS";
+			break;
 
-## Submitting your solution
+		default:
+			console.log("error");
+			break;
+	}
+	if (discountBtn.checked) {
+		amountText.innerHTML = `$${amount * (3 / 4)}.00`;
+	} else {
+		amountText.innerHTML = `$${amount}.00`;
+	}
+};
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+const setDiscount = () => {
+	if (discountBtn.checked) {
+		amountText.innerHTML = `$${amount * (3 / 4)}.00`;
+	} else {
+		amountText.innerHTML = `$${amount}.00`;
+	}
+};
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+### Continued development
 
-## Sharing your solution
+I would like to continue perfecting custom designs for input elements, I feel like just watching a Youtube video or two doesn't allow me to fully explore what I can achieve with implementing my styles, thus I must start by creating custom designs from scratch.
 
-There are multiple places you can share your solution:
+Another is the use of new Javascript concepts to ensure my program works efficiently and to make it more easier to refactor.
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+### Useful resources
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+- [Slider Custom Design](https://www.youtube.com/watch?v=8VlSBlLC6ug)
+  , [Toggle Switch Custom Design](https://www.youtube.com/watch?v=NTyCpC7IrD8&t=785s) These designs gave me the view of the fundamentals of input custom designs, a plethora of different methods and property changes that allows me to create a default design for the elements.
+- [CSS Tips and Tricks](https://www.youtube.com/watch?v=Qhaz36TZG5Y) - While CSS is a massive style language the forms of efficiency to make web pages not only easy to manage but also responsive based on the viewport is such a benefit I would of struggled without had I not found this video.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+## Author
 
-## Got feedback for us?
+- Website - [TBA](#links)
+- Frontend Mentor - [@Salsabaga](https://www.frontendmentor.io/profile/Salsabaga)
+  -Github - [Salsabaga](https://github.com/Salsabaga)
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+## Acknowledgments
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+To every Youtube tutorial channel, you guys are the real heroes and without you I would be pulling my hair out, Thank you all and I hope I can match a fraction of your skills.
