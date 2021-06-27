@@ -17,6 +17,8 @@ body {
 	align-items: center;
 }
 
+/* Sign Up Main Card Body */
+
 #signup-card {
 	background-color: hsl(230, 100%, 99%);
 	color: hsl(225, 20%, 60%);
@@ -33,13 +35,36 @@ body {
 	align-items: center;
 }
 
-.attribution {
-	font-size: 11px;
+/* Title */
+
+#title-container {
 	text-align: center;
+	padding: 100px 0;
+	background-image: url("./images/pattern-circles.svg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
-.attribution a {
-	color: hsl(228, 45%, 44%);
+
+#title-container > p {
+	font-size: 1em;
+	color: var(--grayish-text);
+	margin: 0;
+	line-height: 45px;
+	font-weight: 600;
 }
+
+#title-container > p:first-child {
+	font-size: 2em;
+	color: var(--dark-text);
+	font-weight: 800;
+}
+
+#title-container > p:nth-child(2),
+#title-container > p:nth-child(3) {
+	display: inline-block;
+}
+
+/* Prices and Pageviews block */
 
 .info-text {
 	font-weight: 600;
@@ -62,47 +87,6 @@ body {
 	font-size: 3rem;
 	right: 1.3em;
 	bottom: 0.5em;
-}
-
-.switch {
-	position: relative;
-	display: block;
-	width: 50px;
-	height: 25px;
-}
-
-.slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: hsl(223, 50%, 87%);
-	transition: 0.4s;
-}
-
-.switch input {
-	display: none;
-}
-
-.slider::before {
-	content: "";
-	position: absolute;
-	height: 18px;
-	width: 18px;
-	left: 4px;
-	bottom: 3.5px;
-	transition: 0.4s;
-	background-color: white;
-}
-
-input:checked + .slider {
-	background-color: var(--slider-background);
-}
-
-input:checked + .slider::before {
-	transform: translateX(25px);
 }
 
 /* Range Slider */
@@ -176,6 +160,47 @@ input:checked + .slider::before {
 }
 /* Toggle Slider */
 
+.switch {
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 25px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: hsl(223, 50%, 87%);
+	transition: 0.4s;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider::before {
+	content: "";
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	left: 4px;
+	bottom: 3.5px;
+	transition: 0.4s;
+	background-color: white;
+}
+
+input:checked + .slider {
+	background-color: var(--slider-background);
+}
+
+input:checked + .slider::before {
+	transform: translateX(25px);
+}
+
 .slider.round {
 	border-radius: 30px;
 }
@@ -209,7 +234,8 @@ input:checked + .slider::before {
 	position: absolute;
 }
 
-/* Trial */
+/* Trial Box */
+
 #trial-container {
 	border-top: 2px solid hsl(224, 65%, 95%);
 	display: flex;
@@ -239,33 +265,14 @@ input:checked + .slider::before {
 	font-weight: 600;
 }
 
-/* Title */
+/* Footer */
 
-#title-container {
+.attribution {
+	font-size: 11px;
 	text-align: center;
-	padding: 100px 0;
-	background-image: url("./images/pattern-circles.svg");
-	background-repeat: no-repeat;
-	background-position: center;
 }
-
-#title-container > p {
-	font-size: 1em;
-	color: var(--grayish-text);
-	margin: 0;
-	line-height: 45px;
-	font-weight: 600;
-}
-
-#title-container > p:first-child {
-	font-size: 2em;
-	color: var(--dark-text);
-	font-weight: 800;
-}
-
-#title-container > p:nth-child(2),
-#title-container > p:nth-child(3) {
-	display: inline-block;
+.attribution a {
+	color: hsl(228, 45%, 44%);
 }
 
 /* Responsive */
