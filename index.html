@@ -22,60 +22,65 @@
 		<title>Frontend Mentor | Interactive pricing component</title>
 	</head>
 	<body>
-		<div id="title-container">
-			<p>Simple, traffic-based pricing</p>
-			<p>Sign-up for our 30-day trial.</p>
-			<p>No credit card required.</p>
-		</div>
-		<div id="signup-card">
-			<div id="price-container">
-				<div id="info-views" class="info-text first">10K PAGEVIEWS</div>
-				<div id="info-price" class="info-text second">
-					<p>$8.00</p>
-					<p>/ month</p>
+		<header>
+			<div id="title-container">
+				<p>Simple, traffic-based pricing</p>
+				<p>Sign-up for our 30-day trial.</p>
+				<p>No credit card required.</p>
+			</div>
+		</header>
+		<main>
+			<div id="signup-card">
+				<div id="price-container">
+					<div id="info-views" class="info-text first">10K PAGEVIEWS</div>
+					<div id="info-price" class="info-text second">
+						<p>$8.00</p>
+						<p>/ month</p>
+					</div>
+					<div class="slider-container">
+						<span class="bar"><span class="fill"></span></span>
+						<input
+							type="range"
+							name=""
+							id="slider"
+							class="range"
+							min="10"
+							max="50"
+							step="10"
+							value="0"
+						/>
+					</div>
 				</div>
-				<div class="slider-container">
-					<span class="bar"><span class="fill"></span></span>
-					<input
-						type="range"
-						name=""
-						id="slider"
-						class="range"
-						min="10"
-						max="50"
-						step="10"
-						value="0"
-					/>
+				<div id="toggle-container">
+					<div class="toggle-text">Monthly Billing</div>
+					<label class="switch">
+						<input type="checkbox" id="toggle-box" name="checkbox" /><span
+							class="slider round"
+						></span>
+					</label>
+					<div class="end-text">Yearly Billing</div>
+				</div>
+				<div id="trial-container">
+					<div id="check-list">
+						<ul>
+							<li>Unlimited websites</li>
+							<li>100% data ownership</li>
+							<li>Email reports</li>
+						</ul>
+					</div>
+					<div id="trial-btn-container">
+						<button type="submit" id="submit-btn">Start my trial</button>
+					</div>
 				</div>
 			</div>
-			<div id="toggle-container">
-				<div class="toggle-text">Monthly Billing</div>
-				<label class="switch">
-					<input type="checkbox" id="toggle-box" name="checkbox" /><span
-						class="slider round"
-					></span>
-				</label>
-				<div class="end-text">Yearly Billing</div>
+		</main>
+		<footer>
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Danny Baldeon Abril</a>.
 			</div>
-			<div id="trial-container">
-				<div id="check-list">
-					<ul>
-						<li>Unlimited websites</li>
-						<li>100% data ownership</li>
-						<li>Email reports</li>
-					</ul>
-				</div>
-				<div id="trial-btn-container">
-					<button type="submit">Start my trial</button>
-				</div>
-			</div>
-		</div>
-
-		<div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Danny Baldeon Abril</a>.
-		</div>
+		</footer>
 	</body>
 </html>
